@@ -16,14 +16,14 @@ import static com.codeborne.selenide.Selenide.open;
 public class appOrderTest {
 
     private WebDriver driver;
-    
-    /*
+
+
     @BeforeAll
     static void setUpAll() {
-        //System.setProperty("webdriver.chrome.driver", "driver/win/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "driver/win/chromedriver.exe");
         //WebDriverManager.chromedriver().setup();
     }
-    */
+
 
     @BeforeEach
     void setUp() {
