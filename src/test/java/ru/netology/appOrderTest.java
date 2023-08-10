@@ -26,7 +26,7 @@ public class appOrderTest {
 
     @BeforeEach
     void setUp() {
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
     }
 
     @AfterEach
@@ -36,7 +36,7 @@ public class appOrderTest {
     }
 
     @Test
-    void appOrderTest(){
+    void appOrderTest() {
         open("http://localhost:9999");
         SelenideElement form = $("form");
         form.$("span [name=name]").setValue("Ну пачиму");
@@ -47,7 +47,7 @@ public class appOrderTest {
     }
 
     @Test
-    void appInvalidName(){
+    void appInvalidName() {
         open("http://localhost:9999");
         SelenideElement form = $("form");
         form.$("span [name=name]").setValue("fail");
@@ -58,7 +58,7 @@ public class appOrderTest {
     }
 
     @Test
-    void appInvalidPhone(){
+    void appInvalidPhone() {
         open("http://localhost:9999");
         SelenideElement form = $("form");
         form.$("span [name=name]").setValue("Алекс");
@@ -69,7 +69,7 @@ public class appOrderTest {
     }
 
     @Test
-    void appInvalidCheckbox(){
+    void appInvalidCheckbox() {
         open("http://localhost:9999");
         SelenideElement form = $("form");
         form.$("span [name=name]").setValue("Алекс");
@@ -77,7 +77,4 @@ public class appOrderTest {
         form.$("button").click();
         $(".input_invalid .checkbox__text").shouldHave(Condition.exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
     }
-
-
-
 }
