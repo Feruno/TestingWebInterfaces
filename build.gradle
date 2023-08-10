@@ -1,6 +1,13 @@
 plugins {
     id 'java'
 }
+compileJava.options.encoding = 'UTF-8' // устанавливает кодировку для компилируемого кода
+javadoc.options.encoding = 'UTF-8' // устанавливает кодировку для генерируемой документации
+compileTestJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 
 group 'org.example'
 version '1.0-SNAPSHOT'
